@@ -102,7 +102,6 @@ body,button,input,textarea,select,.brand,.hero h1,.hero h2,.section-title,.pilla
       <label for="storyText">احكي لي عن تجربتكِ</label>
       <textarea id="storyText" rows="4" maxlength="1800" placeholder="كل بداية بسيطة تستاهل تنحكى"></textarea>
       <div class="story-actions"><button class="btn btn-primary" id="sendStory" type="button">أرسلي حكايتكِ ♡</button><button class="btn btn-outline" id="copyStory" type="button">انسخي حكايتكِ</button><span id="storyFeedback" role="status" aria-live="polite"></span></div>
-      
     </div>
   </div>
 </section>
@@ -116,9 +115,7 @@ function render(){updateDay();document.querySelectorAll('[data-tab]').forEach(b=
 const suggestions=['تعلّمي ثلاث كلمات جديدة بلغة تحبينها.','اقرئي خمس صفحات من كتاب تحبينه.','جرّبي وصفة جديدة.','خصصي عشر دقائق لتعلّم مهارة رقمية.','اكتبي فكرة مشروع صغيرة في دفتركِ.','جرّبي تمارين تمدد خفيفة.','تعلمي اختصارًا جديدًا على جهازكِ.','خصصي ربع ساعة للخط أو الرسم.','شاهدي درسًا قصيرًا في مجال يثير فضولكِ.'];let idx=0;document.getElementById('newSuggestion').addEventListener('click',()=>{idx=(idx+1)%suggestions.length;document.getElementById('suggestion').textContent=suggestions[idx]});
 const dialog=document.getElementById('letterDialog');const openDialog=()=>{if(typeof dialog.showModal==='function')dialog.showModal();else dialog.setAttribute('open','')};const closeDialog=()=>{if(typeof dialog.close==='function')dialog.close();else dialog.removeAttribute('open')};document.getElementById('openLetter').addEventListener('click',openDialog);document.getElementById('closeLetter').addEventListener('click',closeDialog);dialog.addEventListener('click',e=>{if(e.target===dialog)closeDialog()});
 const sendStoryButton=document.getElementById('sendStory');
-// أضيفي مفتاح الوصول الذي يصلكِ بعد تفعيل بريدكِ في Web3Forms.
-// مفتاح الوصول عام ومخصص للنماذج، لا تضعي هنا كلمة مرور البريد أو أي مفتاح سري.
-const WEB3FORMS_ACCESS_KEY='PASTE_WEB3FORMS_ACCESS_KEY_HERE';
+const WEB3FORMS_ACCESS_KEY='369024af-3962-42e3-91e3-2aa2c90bad7a';
 if(sendStoryButton){sendStoryButton.addEventListener('click',async()=>{
   const input=document.getElementById('storyText');
   const feedback=document.getElementById('storyFeedback');
